@@ -1,0 +1,5 @@
+<Solution>
+  <Folder Name="/Results/" />
+  <Project Path="SW.Library.Result/SW.Library.Result.csproj" />
+  <Project Path="Tests/SW.Library.Result.Tests/SW.Library.Result.Tests.csproj" />
+</Solution>
