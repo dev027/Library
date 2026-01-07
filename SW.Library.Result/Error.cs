@@ -5,21 +5,57 @@
 namespace SW.Library.Result;
 
 using Ardalis.Result;
+using Ardalis.GuardClauses;
 
 /// <summary>
 /// Represents and error code and description.
 /// </summary>
-public sealed record Error(string Code, string Description)
+public sealed record Error
 {
     /// <summary>
     /// None.
     /// </summary>
-    public static readonly Error None = new(string.Empty, string.Empty);
+    public static readonly Error None = new();
 
     /// <summary>
     /// The separator between the error code and description.
     /// </summary>
     public static readonly string Separator = "¬";
+
+    /// <summary>
+    /// Initializes a new instance of the <see cref="Error"/> class.
+    /// </summary>
+    /// <param name="code">The error code.</param>
+    /// <param name="description">The error description.</param>
+    public Error(string code, string description)
+    {
+        Guard.Against.NullOrWhiteSpace(code, nameof(code));
+        Guard.Against.NullOrWhiteSpace(description, nameof(description));
+
+        this.Code = code;
+        this.Description = description;
+    }
+
+    /// <summary>
+    /// Initializes a new instance of the <see cref="Error"/> class.
+    /// </summary>
+    /// <remarks>Used for creating <see cref="Error.None"/>.</remarks>
+    private Error()
+    {
+        this.Code = string.Empty;
+        this.Description = string.Empty;
+    }
+
+    /// <summary>
+    /// Gets the error code.
+    /// </summary>
+    public string Code { get; }
+
+
+    /// <summary>
+    /// Gets the error description.
+    /// </summary>
+    public string Description { get; }
 
     /// <summary>
     /// Converts a result back to an error.
