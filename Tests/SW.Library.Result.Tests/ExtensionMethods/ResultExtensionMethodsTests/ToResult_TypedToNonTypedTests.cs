@@ -1,4 +1,4 @@
-﻿// <copyright file="ToResultTests.cs" company="Steve Wright">
+﻿// <copyright file="ToResult_TypedToNonTypedTests.cs" company="Steve Wright">
 // Copyright (c) Steve Wright. All rights reserved.
 // </copyright>
 
@@ -13,13 +13,13 @@ using SW.Library.Result.ExtensionMethods;
 /// Tests for <see cref="ResultExtensionMethods.ToResult{T}(Result{T})"/>.
 /// </summary>
 [TestClass]
-public class ToResultTests
+public class ToResult_TypedToNonTypedTests
 {
     /// <summary>
     /// Test that when status is ok then it returns expected result.
     /// </summary>
     [TestMethod]
-    public void ToResult_FromTypedResult_WhenStatusIsOk_ReturnsExpectedResult()
+    public void ToResult_WhenStatusIsOk_ReturnsExpectedResult()
     {
         // ARRANGE
         var typedResult = Result<int>.Success(42);
@@ -36,7 +36,7 @@ public class ToResultTests
     /// Test that when status is error then it return expected result.
     /// </summary>
     [TestMethod]
-    public void ToResult_FromTypedResult_WhenStatusIsError_ReturnsExpectedResult()
+    public void ToResult_WhenStatusIsError_ReturnsExpectedResult()
     {
         // ARRANGE
         string error = "Error message";
@@ -54,7 +54,7 @@ public class ToResultTests
     /// Test that when status is forbidden then it return expected result.
     /// </summary>
     [TestMethod]
-    public void ToResult_FromTypedResult_WhenStatusIsForbidden_ReturnsExpectedResult()
+    public void ToResult_WhenStatusIsForbidden_ReturnsExpectedResult()
     {
         // ARRANGE
         string error = "Error message";
@@ -72,7 +72,7 @@ public class ToResultTests
     /// Test that when status is unauthorized then it return expected result.
     /// </summary>
     [TestMethod]
-    public void ToResult_FromTypedResult_WhenStatusIsUnauthorized_ReturnsExpectedResult()
+    public void ToResult_WhenStatusIsUnauthorized_ReturnsExpectedResult()
     {
         // ARRANGE
         string error = "Error message";
@@ -90,7 +90,7 @@ public class ToResultTests
     /// Test that when status is error then it return expected result.
     /// </summary>
     [TestMethod]
-    public void ToResult_FromTypedResult_WhenStatusIsInvalid_ReturnsExpectedResult()
+    public void ToResult_WhenStatusIsInvalid_ReturnsExpectedResult()
     {
         // ARRANGE
         string error = "Error message";
@@ -109,7 +109,7 @@ public class ToResultTests
     /// Test that when status is not found then it return expected result.
     /// </summary>
     [TestMethod]
-    public void ToResult_FromTypedResult_WhenStatusIsNotFound_ReturnsExpectedResult()
+    public void ToResult_WhenStatusIsNotFound_ReturnsExpectedResult()
     {
         // ARRANGE
         string error = "Error message";
@@ -127,7 +127,7 @@ public class ToResultTests
     /// Test that when status is error then it return expected result.
     /// </summary>
     [TestMethod]
-    public void ToResult_FromTypedResult_WhenStatusIsConflict_ReturnsExpectedResult()
+    public void ToResult_WhenStatusIsConflict_ReturnsExpectedResult()
     {
         // ARRANGE
         string error = "Error message";
@@ -145,7 +145,7 @@ public class ToResultTests
     /// Test that when status is critical error then it return expected result.
     /// </summary>
     [TestMethod]
-    public void ToResult_FromTypedResult_WhenStatusIsCriticalError_ReturnsExpectedResult()
+    public void ToResult_WhenStatusIsCriticalError_ReturnsExpectedResult()
     {
         // ARRANGE
         string error = "Error message";
@@ -163,7 +163,7 @@ public class ToResultTests
     /// Test that when status is unavailable then it return expected result.
     /// </summary>
     [TestMethod]
-    public void ToResult_FromTypedResult_WhenStatusIsUnavailable_ReturnsExpectedResult()
+    public void ToResult_WhenStatusIsUnavailable_ReturnsExpectedResult()
     {
         // ARRANGE
         string error = "Error message";
@@ -181,7 +181,7 @@ public class ToResultTests
     /// Test that when status is unexpected then it throws invalid operation exception.
     /// </summary>
     [TestMethod]
-    public void ToResult_FromTypedResult_WhenStatusIsUnexpected_ThrowsInvalidOperationException()
+    public void ToResult_WhenStatusIsUnexpected_ThrowsInvalidOperationException()
     {
         // ARRANGE
         string error = "Error message";
