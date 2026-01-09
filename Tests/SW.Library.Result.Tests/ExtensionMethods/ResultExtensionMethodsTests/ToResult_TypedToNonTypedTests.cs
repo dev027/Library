@@ -22,7 +22,7 @@ public class ToResult_TypedToNonTypedTests
     public void ToResult_WhenStatusIsOk_ReturnsExpectedResult()
     {
         // ARRANGE
-        var typedResult = Result<int>.Success(42);
+        Result<int> typedResult = Result<int>.Success(42);
 
         // ACT
         Result result = typedResult.ToResult();

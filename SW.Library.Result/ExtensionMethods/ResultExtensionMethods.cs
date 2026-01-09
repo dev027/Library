@@ -196,8 +196,6 @@ public static class ResultExtensionMethods
     public static LogLevel GetLogLevel(this Result result) => result.Status switch
     {
         ResultStatus.Ok => LogLevel.Information,
-        ResultStatus.Created => LogLevel.Information,
-        ResultStatus.NoContent => LogLevel.Information,
 
         ResultStatus.Invalid => LogLevel.Warning,
         ResultStatus.Unauthorized => LogLevel.Warning,
