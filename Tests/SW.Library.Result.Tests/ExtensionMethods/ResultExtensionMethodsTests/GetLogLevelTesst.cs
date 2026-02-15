@@ -5,9 +5,7 @@
 namespace SW.Library.Result.Tests.ExtensionMethods.ResultExtensionMethodsTests;
 
 using System;
-using System.Collections.Generic;
 using System.Reflection;
-using System.Text;
 using Ardalis.Result;
 using Microsoft.Extensions.Logging;
 using SW.Library.Result.ExtensionMethods;
