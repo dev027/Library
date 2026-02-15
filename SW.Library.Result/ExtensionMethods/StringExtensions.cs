@@ -4,8 +4,8 @@
 
 namespace SW.Library.Result.ExtensionMethods;
 
-using Ardalis.GuardClauses;
 using System.Text;
+using Ardalis.GuardClauses;
 
 /// <summary>
 /// Provides extension methods for the <see cref="string"/> type.
