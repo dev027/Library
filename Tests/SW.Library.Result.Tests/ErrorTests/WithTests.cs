@@ -17,8 +17,8 @@ public class WithTests
     public void Error_With_WhenCalled_ReturnsExpectedResult()
     {
         // ARRANGE
-        string errorDescription = "Test error description.";
-        string errorCode = "TestIdentifier.TestErrorCode";
+        const string errorDescription = "Test error description.";
+        const string errorCode = "TestIdentifier.TestErrorCode";
         Error original = new(errorCode, errorDescription);
 
         // ACT
