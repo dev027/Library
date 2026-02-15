@@ -3,6 +3,7 @@
 // </copyright>
 
 namespace SW.Library.Result.Tests.ErrorTests;
+
 /// <summary>
 /// Test for <see cref="Error"/> with operator.
 /// </summary>
