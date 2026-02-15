@@ -1,4 +1,4 @@
-﻿// <copyright file="StringExtensionMethods.cs" company="Steve Wright">
+﻿// <copyright file="StringExtensions.cs" company="Steve Wright">
 // Copyright (c) Steve Wright. All rights reserved.
 // </copyright>
 

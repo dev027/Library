@@ -4,8 +4,8 @@
 
 namespace SW.Library.Result;
 
-using Ardalis.Result;
 using Ardalis.GuardClauses;
+using Ardalis.Result;
 
 /// <summary>
 /// Represents and error code and description.
@@ -29,8 +29,8 @@ public sealed record Error
     /// <param name="description">The error description.</param>
     public Error(string code, string description)
     {
-        Guard.Against.NullOrWhiteSpace(code, nameof(code));
-        Guard.Against.NullOrWhiteSpace(description, nameof(description));
+        Guard.Against.NullOrWhiteSpace(code);
+        Guard.Against.NullOrWhiteSpace(description);
 
         this.Code = code;
         this.Description = description;
@@ -50,7 +50,6 @@ public sealed record Error
     /// Gets the error code.
     /// </summary>
     public string Code { get; }
-
 
     /// <summary>
     /// Gets the error description.
